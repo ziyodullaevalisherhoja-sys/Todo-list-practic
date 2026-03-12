@@ -1,0 +1,236 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#f3f3f3;
+  transition: background 0.3s, color 0.3s;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  transition: 0.3s;
+  padding-bottom: 50px;
+}
+
+body.dark {
+  background: #252525;
+  color: #fff;
+}
+
+body.dark h1 {
+  color: #fff;
+}
+
+body.dark .item {
+  border-bottom: 2px solid #5a53d1;
+}
+
+body.dark .top-bar select {
+  background: #252525;
+  border: 1px solid #6c63ff;
+  color: #fff;
+}
+
+.container{
+  width:600px;
+  margin:auto;
+  padding-top:80px;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:30px;
+  color: #333;
+}
+
+.top-bar{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.search{
+  flex:1;
+  position:relative;
+}
+
+.search input{
+  width:100%;
+  padding:12px;
+  border:2px solid #6c63ff;
+  border-radius:6px;
+  background: transparent;
+  color: inherit;
+}
+
+.search .icon{
+  position:absolute;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+select{
+  padding:10px;
+  background:#6c63ff;
+  color:white;
+  border:none;
+  border-radius:6px;
+}
+
+.theme{
+  background:#6c63ff;
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.list{
+  margin-top:30px;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #888;
+}
+
+.item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 0;
+  border-bottom:2px solid #6c63ff;
+}
+
+.item span{
+  flex:1;
+  margin-left:10px;
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+  font-size: 20px;
+}
+
+.actions svg {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.actions svg:hover {
+  opacity: 0.7;
+}
+
+.done span{
+  /* Убрали перечёркивание текста, как просил пользователь */
+}
+
+.add{
+  position:fixed;
+  right:40px;
+  bottom:40px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  border:none;
+  background:#6c63ff;
+  color:white;
+  font-size:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.add:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: white;
+  width: 450px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  color: #333;
+}
+
+body.dark .modal {
+  background: #252525;
+  color: #fff;
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #6c63ff;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  background: transparent;
+  color: inherit;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn {
+  padding: 10px 30px;
+  border: 1px solid #6c63ff;
+  background: transparent;
+  color: #6c63ff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.apply-btn {
+  padding: 10px 30px;
+  border: none;
+  background: #6c63ff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-btn:hover, .apply-btn:hover {
+  opacity: 0.9;
+}
